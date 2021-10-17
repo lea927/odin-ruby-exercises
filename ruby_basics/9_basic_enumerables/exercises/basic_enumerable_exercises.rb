@@ -2,6 +2,7 @@ inventory_list = { "apples" => 1, "bananas" => 3, "oranges" => 7
 }
 guesses = ['cookies', 'cake', 'ice cream']
 numbers = [0, -7, 14, -21]
+word_list = ['cat', 'horse', 'rabbit', 'deer']
 
 def display_current_inventory(inventory_list)
   inventory_list.each{ |key, value| puts "#{key}, quantity: #{value}"}
@@ -29,6 +30,11 @@ def find_low_inventory(inventory_list)
 end
 
 def find_word_lengths(word_list)
+  result = {}
+  word_list.reduce(Hash.new(0)) do |key,value| 
+    result[value] = value.length
+    result
+  end
   # use #reduce to iterate through each item of the word_list (an array)
   # return a hash with each word as the key and its length as the value
   # hint: look at the documentation and review the reduce examples in basic enumerable lesson
@@ -38,3 +44,4 @@ display_current_inventory(inventory_list)
 display_guess_order(guesses)
 find_absolute_values(numbers)
 find_low_inventory(inventory_list)
+find_word_lengths(word_list)
