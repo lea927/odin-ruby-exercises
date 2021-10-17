@@ -23,6 +23,7 @@ def find_absolute_values(numbers)
 end
 
 def find_low_inventory(inventory_list)
+  inventory_list.select { |key,value| value < 4 }
   # use #select to iterate through each item of the inventory_list (a hash)
   # return a hash of items with values less than 4
 end
@@ -36,3 +37,4 @@ end
 display_current_inventory(inventory_list)
 display_guess_order(guesses)
 find_absolute_values(numbers)
+find_low_inventory(inventory_list)
