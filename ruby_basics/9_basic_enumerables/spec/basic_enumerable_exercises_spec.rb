@@ -23,7 +23,7 @@ RSpec.describe 'Basic Enumerable Exercises' do
   
   describe 'display guess order exercise' do
     
-    xit 'outputs each guess of strings in order' do
+    it 'outputs each guess of strings in order' do
       expect($stdout).to receive(:puts).with("Guess #1 is cookies")
       expect($stdout).to receive(:puts).with("Guess #2 is cake")
       expect($stdout).to receive(:puts).with("Guess #3 is ice cream")
@@ -31,7 +31,7 @@ RSpec.describe 'Basic Enumerable Exercises' do
       display_guess_order(guesses)
     end
 
-    xit 'outputs each guess of integers in order' do
+    it 'outputs each guess of integers in order' do
       expect($stdout).to receive(:puts).with("Guess #1 is 553")
       expect($stdout).to receive(:puts).with("Guess #2 is 554")
       expect($stdout).to receive(:puts).with("Guess #3 is 555")
