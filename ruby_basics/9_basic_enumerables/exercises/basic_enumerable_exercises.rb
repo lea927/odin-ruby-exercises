@@ -1,6 +1,7 @@
 inventory_list = { "apples" => 1, "bananas" => 3, "oranges" => 7
 }
 guesses = ['cookies', 'cake', 'ice cream']
+numbers = [0, -7, 14, -21]
 
 def display_current_inventory(inventory_list)
   inventory_list.each{ |key, value| puts "#{key}, quantity: #{value}"}
@@ -16,6 +17,7 @@ def display_guess_order(guesses)
 end
 
 def find_absolute_values(numbers)
+  result = numbers.map { |number| number.abs }
   # use #map to iterate through each item of the numbers (an array)
   # return an array of absolute values of each number
 end
@@ -33,3 +35,4 @@ end
 
 display_current_inventory(inventory_list)
 display_guess_order(guesses)
+find_absolute_values(numbers)

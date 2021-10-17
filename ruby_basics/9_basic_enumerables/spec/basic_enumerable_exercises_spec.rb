@@ -42,13 +42,13 @@ RSpec.describe 'Basic Enumerable Exercises' do
 
   describe 'find absolute values exercise' do
     
-    xit 'returns an array of positive integers' do
+    it 'returns an array of positive integers' do
       numbers = [0, -7, 14, -21]
       result = [0, 7, 14, 21]
       expect(find_absolute_values(numbers)).to eq(result)
     end
 
-    xit 'returns an array of positive floating point numbers' do
+    it 'returns an array of positive floating point numbers' do
       numbers = [-3.14, 6.28, -9.42]
       result = [3.14, 6.28, 9.42]
       expect(find_absolute_values(numbers)).to eq(result)
