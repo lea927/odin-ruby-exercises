@@ -1,6 +1,7 @@
 drink_list = %w[coffe water tea]
 guess_list = %w[2 3 4 5]
 answer = 5
+year_list = %w[2011 2021 2016]
 
 def coffee_drink?(drink_list)
   # use #include? to return true when the drink_list (array) contains the string "coffee" or "espresso"
@@ -14,6 +15,7 @@ end
 
 def recent_years?(year_list)
   # use #all? to return true when all of the years in the year_list (array) are between 2011 and 2021
+  year_list.all? { |year| year.to_i >= 2011 && year.to_i <= 2021 }
 end
 
 def correct_format?(word_list)
@@ -26,3 +28,4 @@ end
 
 coffee_drink?(drink_list)
 correct_guess?(guess_list, answer)
+recent_years?(year_list)
