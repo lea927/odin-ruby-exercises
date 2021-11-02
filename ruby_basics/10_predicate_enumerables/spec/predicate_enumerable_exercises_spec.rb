@@ -29,19 +29,19 @@ RSpec.describe 'Predicate Enumerable Exercises' do
 
   describe 'correct guess exercise' do
 
-    xit 'returns true when the list contains the answer' do
+    it 'returns true when the list contains the answer' do
       guess_list = [2, 3, 4, 5]
       answer = 5
       expect(correct_guess?(guess_list, answer)).to be true
     end
 
-    xit 'returns false when the list does not contain the answer' do
+    it 'returns false when the list does not contain the answer' do
       guess_list = [6, 7, 8, 9]
       answer = 5
       expect(correct_guess?(guess_list, answer)).to be false
     end
 
-    xit 'returns false when the list is empty' do
+    it 'returns false when the list is empty' do
       guess_list = []
       answer = 5
       expect(correct_guess?(guess_list, answer)).to be false

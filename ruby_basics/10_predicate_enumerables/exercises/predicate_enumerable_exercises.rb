@@ -1,4 +1,6 @@
 drink_list = %w[coffe water tea]
+guess_list = %w[2 3 4 5]
+answer = 5
 
 def coffee_drink?(drink_list)
   # use #include? to return true when the drink_list (array) contains the string "coffee" or "espresso"
@@ -7,6 +9,7 @@ end
 
 def correct_guess?(guess_list, answer)
   # use #any? to return true when any element of the guess_list (array) equals the answer (number)
+  guess_list.any?(answer)
 end
 
 def recent_years?(year_list)
@@ -22,3 +25,4 @@ def valid_scores?(score_list, perfect_score)
 end
 
 coffee_drink?(drink_list)
+correct_guess?(guess_list, answer)
