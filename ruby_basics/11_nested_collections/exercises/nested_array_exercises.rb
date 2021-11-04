@@ -17,6 +17,8 @@ end
 def add_seat_to_row(chart, row_index, seat_to_add)
   # take a chart (2d array)  and add seat_to_add to the end of the row that is
   # at row_index index of the chart, then return the chart
+  chart[row_index] << seat_to_add
+  chart
 end
 
 def add_another_row(chart, row_to_add)
@@ -59,3 +61,8 @@ def find_favorite(array_of_hash_objects)
 end
 
 blank_seating_chart(3,3)
+
+chart = [[nil, 'Bob', 'Joe'], [nil, nil, 'Bill']]
+row_index = 1
+seat_to_add = 'Jack'
+add_seat_to_row(chart, row_index, seat_to_add)

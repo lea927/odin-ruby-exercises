@@ -27,12 +27,12 @@ RSpec.describe 'Nested Array Exercises' do
   describe 'add seat to row exercise' do
     let(:array) { [[nil, 'Bob', 'Joe'], [nil, nil, 'Bill']] }
 
-    xit "returns the array with 'Jack' added to the end of the second row" do
+    it "returns the array with 'Jack' added to the end of the second row" do
       expected_output = [[nil, 'Bob', 'Joe'], [nil, nil, 'Bill', 'Jack']]
       expect(add_seat_to_row(array, 1, 'Jack')).to eq(expected_output)
     end
 
-    xit "returns the array with 'Diane' added to the end of the first row" do
+    it "returns the array with 'Diane' added to the end of the first row" do
       expected_output = [[nil, 'Bob', 'Joe', 'Diane'], [nil, nil, 'Bill']]
       expect(add_seat_to_row(array, 0, 'Diane')).to eq(expected_output)
     end
