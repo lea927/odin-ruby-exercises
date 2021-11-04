@@ -1,5 +1,4 @@
 def blank_seating_chart(number_of_rows, seats_per_row)
-  Array.new(number_of_rows) {Array.new(seats_per_row)}
   # return a 2d array to represent a seating chart that contains
   # number_of_rows nested arrays, each with seats_per_row entries of nil to
   # represent that each seat is empty.
@@ -12,6 +11,7 @@ def blank_seating_chart(number_of_rows, seats_per_row)
 
   # NOTE: if one of the nested arrays is changed, the others should **not**
   # change with it
+  Array.new(number_of_rows) {Array.new(seats_per_row)}
 end
 
 def add_seat_to_row(chart, row_index, seat_to_add)
@@ -60,8 +60,11 @@ def find_favorite(array_of_hash_objects)
   # return true to the :is_my_favorite? key
 end
 
+# ------ CALL FUNCTIONS HERE -------------- 
+# 1.)
 blank_seating_chart(3,3)
 
+# 2.)
 chart = [[nil, 'Bob', 'Joe'], [nil, nil, 'Bill']]
 row_index = 1
 seat_to_add = 'Jack'
