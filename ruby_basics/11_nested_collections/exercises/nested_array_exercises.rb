@@ -24,6 +24,8 @@ end
 def add_another_row(chart, row_to_add)
   # take a chart and add row_to_add to the end of the chart,
   # then return the chart.
+  chart << row_to_add
+  chart
 end
 
 def delete_seat_from_row(chart, row_index, seat_index)
@@ -69,3 +71,7 @@ chart = [[nil, 'Bob', 'Joe'], [nil, nil, 'Bill']]
 row_index = 1
 seat_to_add = 'Jack'
 add_seat_to_row(chart, row_index, seat_to_add)
+
+# 3.)
+row_to_add = ['Bo', nil, 'Kim']
+add_another_row(chart, row_to_add)
