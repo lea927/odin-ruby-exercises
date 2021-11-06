@@ -33,6 +33,8 @@ def delete_seat_from_row(chart, row_index, seat_index)
   # the chart, then return the chart
 
   # Hint: explore the ruby docs to find a method for deleting from an array!
+  chart[row_index].delete_at(seat_index)
+  chart
 end
 
 def delete_row_from_chart(chart, row_index)
@@ -63,11 +65,12 @@ def find_favorite(array_of_hash_objects)
 end
 
 # ------ CALL FUNCTIONS HERE -------------- 
+chart = [[nil, 'Bob', 'Joe'], [nil, nil, 'Bill']]
+
 # 1.)
 blank_seating_chart(3,3)
 
 # 2.)
-chart = [[nil, 'Bob', 'Joe'], [nil, nil, 'Bill']]
 row_index = 1
 seat_to_add = 'Jack'
 add_seat_to_row(chart, row_index, seat_to_add)
@@ -75,3 +78,8 @@ add_seat_to_row(chart, row_index, seat_to_add)
 # 3.)
 row_to_add = ['Bo', nil, 'Kim']
 add_another_row(chart, row_to_add)
+
+# 4.)
+row_index = 0
+seat_index = 1
+delete_seat_from_row(chart, row_index, seat_index)

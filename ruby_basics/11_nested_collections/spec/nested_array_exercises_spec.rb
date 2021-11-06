@@ -55,12 +55,12 @@ RSpec.describe 'Nested Array Exercises' do
   describe 'delete seat from grid exercise' do
     let(:array) { [[nil, 'Bob', 'Joe'], [nil, nil, 'Bill']] }
 
-    xit 'returns the array with the second item in the first row deleted' do
+    it 'returns the array with the second item in the first row deleted' do
       expected_output = [[nil, 'Joe'], [nil, nil, 'Bill']]
       expect(delete_seat_from_row(array, 0, 1)).to eq(expected_output)
     end
 
-    xit 'returns the array with the first item in the second row deleted' do
+    it 'returns the array with the first item in the second row deleted' do
       expected_output = [[nil, 'Bob', 'Joe'], [nil, 'Bill']]
       expect(delete_seat_from_row(array, 1, 0)).to eq(expected_output)
     end
