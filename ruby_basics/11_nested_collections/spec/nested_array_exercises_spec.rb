@@ -84,7 +84,7 @@ RSpec.describe 'Nested Array Exercises' do
     let(:array) { [[nil, 'Bob', 'Joe'], [nil, nil, 'Bill']] }
 
     context "when there are three nil's in the given array" do
-      xit 'returns the number 3' do
+      it 'returns the number 3' do
         expect(count_empty_seats(array)).to eq(3)
       end
     end
@@ -92,12 +92,12 @@ RSpec.describe 'Nested Array Exercises' do
     context "when there are four nil's in the given array" do
       let(:array) { [[nil, 'Bob', nil], [nil, nil, 'Bill']] }
 
-      xit 'returns the number 4' do
+      it 'returns the number 4' do
         expect(count_empty_seats(array)).to eq(4)
       end
     end
 
-    xit 'does not mutate the original array' do
+    it 'does not mutate the original array' do
       count_empty_seats(array)
       expect(array).to eq([[nil, 'Bob', 'Joe'], [nil, nil, 'Bill']])
     end
