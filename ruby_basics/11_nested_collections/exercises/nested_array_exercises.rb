@@ -40,6 +40,8 @@ end
 def delete_row_from_chart(chart, row_index)
   # take a chart and delete the row at row_index of the chart,
   # then return the chart
+  chart.delete_at(row_index)
+  chart
 end
 
 def count_empty_seats(chart)
@@ -83,3 +85,7 @@ add_another_row(chart, row_to_add)
 row_index = 0
 seat_index = 1
 delete_seat_from_row(chart, row_index, seat_index)
+
+# 5.) 
+row_index = 1
+delete_row_from_chart(chart, row_index)

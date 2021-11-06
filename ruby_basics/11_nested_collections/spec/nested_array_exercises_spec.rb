@@ -69,12 +69,12 @@ RSpec.describe 'Nested Array Exercises' do
   describe 'delete row from chart exercise' do
     let(:array) { [[nil, 'Bob'], ['Joe', nil], [nil, 'Bill']] }
 
-    xit 'returns the array with the second row deleted' do
+    it 'returns the array with the second row deleted' do
       expected_output = [[nil, 'Bob'], [nil, 'Bill']]
       expect(delete_row_from_chart(array, 1)).to eq(expected_output)
     end
 
-    xit 'returns the array with the first row deleted' do
+    it 'returns the array with the first row deleted' do
       expected_output = [['Joe', nil], [nil, 'Bill']]
       expect(delete_row_from_chart(array, 0)).to eq(expected_output)
     end
