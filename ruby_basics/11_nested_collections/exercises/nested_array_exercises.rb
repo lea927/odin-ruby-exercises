@@ -71,6 +71,11 @@ def find_favorite(array_of_hash_objects)
 
   # TIP: there will only be a maximum of one hash in the array that will
   # return true to the :is_my_favorite? key
+  fave_lang = nil
+  array_of_hash_objects.each do |language|
+    fave_lang = language if language[:is_my_favorite?] == true
+  end
+  fave_lang
 end
 
 # ------ CALL FUNCTIONS HERE -------------- 
@@ -96,3 +101,12 @@ delete_seat_from_row(chart, row_index, seat_index)
 # 5.) 
 row_index = 1
 delete_row_from_chart(chart, row_index)
+
+# 6.)
+array_of_hash_objects = [
+  { name: 'Ruby', is_my_favorite?: true },
+  { name: 'JavaScript', is_my_favorite?: false },
+  { name: 'HTML', is_my_favorite?: false }
+]
+find_favorite(array_of_hash_objects)
+ 
