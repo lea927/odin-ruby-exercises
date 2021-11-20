@@ -11,10 +11,10 @@ def caesar_cipher(string, key)
   # create contraints; A.) User enters non-letter characters
   string.split("").each do |s|
     alpha_arr.each_with_index do |letter,index|
-      index_arr << index if s.upcase === letter 
+      index_arr << index if s.casecmp? letter
     end
   end
   p index_arr
 end
 
-caesar_cipher('ab a', 1)
+caesar_cipher('a b', 1)
