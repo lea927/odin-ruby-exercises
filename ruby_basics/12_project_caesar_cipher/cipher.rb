@@ -1,5 +1,3 @@
-# To-do:
-# keep the same case
 require 'pry-byebug'
 
 def is_lower?(letter)
@@ -18,16 +16,15 @@ def caesar_cipher(input, key)
           if string.casecmp? letter 
             position = index + @key
             position = position - (@alphabet.length) if position > 25
-            return @alphabet[position]
+            @alphabet[position] = is_lower?(string) == true ? @alphabet[position].downcase : @alphabet[position]
+            return @alphabet[position] 
           end
         end
       end
       string = convert(string)
     }
   }  
-  p retain_case = encrypted.join('').gsub(/\w/) { |letter|
-    
-  }
+  p encrypted.join('')
 end
 
 caesar_cipher("What a string!", 5)
